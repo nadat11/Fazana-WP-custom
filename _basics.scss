@@ -1,0 +1,81 @@
+/******************
+basic styles
+******************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $font;
+    font-size: $fontSize;
+    color: $text;
+    line-break: 1.6;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    transition: $transition;
+}
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+.line {
+    height: 5px;
+    background: linear-gradient(to right,$darkGreen,
+    $green,$primary);
+}
+.py {
+    padding: 100px 0;
+}
+h2 {
+    font-size: 3rem;
+    margin: 30px 0;
+    &::before {
+        display: block;
+        content: "";
+        width: 140px;
+        height: 3px;
+        background: linear-gradient(to right,$darkGreen,
+        $green,$primary);
+        margin: 0 auto 20px auto;
+    }
+}
+/******************
+headers
+******************/
+.headers {
+    img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+    }
+}
+/******************
+intro
+******************/
+.intro {
+    h1 {
+        font-size: 3rem;
+        margin: 30px 0;
+        color: $primary;
+        // &::before {
+        //     @extend h2;
+        //     margin: 30px 0;
+        // }
+    }
+    border-bottom: 3px double lighten($text, 50%);
+}
+/******************
+singleHeaders
+******************/
+.singleHeaders {
+    background: $lightgray;
+    padding: 20px 0;
+    h3 {
+        font-size: 2rem; 
+    }
+}
