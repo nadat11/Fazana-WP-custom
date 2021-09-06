@@ -9,6 +9,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
     <?php wp_head(); ?>
+    <!-- <title><?php bloginfo('title'); ?></title>
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>"> -->
 </head>
 <body>
     
@@ -16,23 +18,18 @@
     <div class="line"></div>
     <!-- drustveneMreze -->
     <section class="drustveneMreze">
-        <article>
-            <a href=""><i class="fab fa-facebook-f"></i></a>
-        </article>
-        <article>
-            <a href=""><i class="fab fa-instagram"></i></a>
-        </article>
-        <article>
-            <a href=""><i class="fab fa-youtube"></i></a>
-        </article>
+        <?php if(is_active_sidebar('drustvene-mreze')): ?>
+        <?php dynamic_sidebar('drustvene-mreze'); ?>
+        <?php endif; ?>
     </section>
     <!-- nav -->
     <nav>
         <a href="<?php echo esc_url(home_url()); ?>" class="logo"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/fazana_logo.webp" alt=""></a>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="istrazite.php">Istražite</a></li>
-            <li><a href="dogadjanja.php">Događanja</a></li>
-            <li><a href="blog.php">Blog</a></li>
-        </ul>
+        <?php $args = array(
+            'theme_location' => 'primary'
+        );
+        
+        ?>
+        <?php wp_nav_menu(); ?>
+       
     </nav>

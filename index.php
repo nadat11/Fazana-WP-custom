@@ -14,7 +14,7 @@
     <section class="blog container">
         <article>
 
-        
+    
             <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
                 <div class="post">
                     <div class="featuredImage">
