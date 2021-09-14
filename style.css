@@ -344,6 +344,7 @@ single
 }
 .single article img, .singleBlog article img, .blog article img {
   width: 100%;
+  height: auto;
 }
 .single article li::before, .singleBlog article li::before, .blog article li::before {
   font-family: "Font Awesome 5 Free";

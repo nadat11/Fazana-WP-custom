@@ -1,14 +1,18 @@
-<?php get_header(); ?>
+<?php 
+/*
+*Template Name: Blog
+*/
+get_header(); ?>
 
     <!-- headers -->
     <header class="headers">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/blog1.webp" alt="">
+        <img src="<?php the_field('blog_header'); ?>" alt="">
     </header>
 
     <!-- intro -->
     <section class="intro py container">
-        <h1>Blog</h1>
-        <p>Fažana, mjesto polaska u otkrivanju….</p>
+        <h1><?php the_field('blog_naslov'); ?></h1>
+        <p><?php the_field('blog_tekst'); ?></p>
     </section>
 
     <section class="blog container">
