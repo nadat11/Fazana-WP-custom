@@ -11,9 +11,8 @@
 
     <!-- intro -->
     <section class="intro py container">
-        <h1>Fažanske plaže</h1>
-        <p>Zamisli odmor na plaži, s kristalno čistom vodom, uz miris borove šume, s čarobnim zalaskom sunca na obzorju otočja Brijuni. Raj između mora i zemlje.
-</p>
+        <h1><?php the_field('naslov'); ?></h1>
+        <p><?php the_field('tekst'); ?></p>
     </section>
 
     <!-- listaIstrazite -->

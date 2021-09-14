@@ -1,12 +1,12 @@
 <?php 
 /*
-*Template Name: Izleti stranica
+*Template Name: Kultura stranica
 */
 
  get_header(); ?>
  <!-- headers -->
  <header class="headers">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/plaze.webp" alt="">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/kultura.webp" alt="">
     </header>
 
     <!-- intro -->
@@ -17,7 +17,7 @@
 
     <!-- listaIstrazite -->
     <section class="istraziteLista container py">
-    <?php $query = new WP_Query(array('post_type' => 'izleti'));
+    <?php $query = new WP_Query(array('post_type' => 'kultura'));
     if($query->have_posts()) : ?>
     <?php while($query->have_posts()) : $query->the_post(); ?>
         <article>
@@ -29,7 +29,7 @@
         </article>
         <?php endwhile; wp_reset_postdata(); ?>
     <?php else : ?>
-        <?php _e('Nema unetih izleta'); ?>
+        <?php _e('Nema unetih dešavanja iz kulture'); ?>
     <?php endif; ?>
     </section>
 

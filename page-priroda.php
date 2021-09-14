@@ -1,23 +1,23 @@
 <?php 
 /*
-*Template Name: Izleti stranica
+*Template Name: Priroda stranica
 */
 
  get_header(); ?>
  <!-- headers -->
  <header class="headers">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/plaze.webp" alt="">
+        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/priroda-header.webp" alt="">
     </header>
 
     <!-- intro -->
     <section class="intro py container">
         <h1><?php the_field('naslov'); ?></h1>
-        <p><?php the_field('tekst'); ?></p>
+       
     </section>
 
     <!-- listaIstrazite -->
     <section class="istraziteLista container py">
-    <?php $query = new WP_Query(array('post_type' => 'izleti'));
+    <?php $query = new WP_Query(array('post_type' => 'priroda'));
     if($query->have_posts()) : ?>
     <?php while($query->have_posts()) : $query->the_post(); ?>
         <article>
@@ -29,7 +29,7 @@
         </article>
         <?php endwhile; wp_reset_postdata(); ?>
     <?php else : ?>
-        <?php _e('Nema unetih izleta'); ?>
+        <?php _e('Nema unetih prikaza prirode'); ?>
     <?php endif; ?>
     </section>
 

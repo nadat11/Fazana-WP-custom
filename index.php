@@ -6,7 +6,7 @@ get_header(); ?>
 
     <!-- headers -->
     <header class="headers">
-        <img src="<?php the_field('blog_header'); ?>" alt="">
+    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/blog1.webp" alt="">
     </header>
 
     <!-- intro -->
