@@ -10,7 +10,7 @@ Version: 1.0
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap");
 /* rgb(3, 169, 244) */
 /******************
-basic style
+basic styles
 ******************/
 * {
   margin: 0;
@@ -94,7 +94,7 @@ singleHeaders
 }
 
 /******************
-nav
+navigation
 ******************/
 nav {
   display: flex;
@@ -149,8 +149,7 @@ header
 footer
 ******************/
 footer {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/footer.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/footer.jpg);
   background-position: center;
   background-size: cover;
   color: #fff;
@@ -290,6 +289,7 @@ dogadjaji
 }
 .dogadjaji .container div img {
   width: 100%;
+  height: auto;
   display: block;
   transition: 0.3s ease;
 }
@@ -324,9 +324,7 @@ dogadjaji
 /****************
 single
 ****************/
-.single,
-.singleBlog,
-.blog {
+.single, .singleBlog, .blog {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -335,64 +333,44 @@ single
   padding: 50px 0 0 0;
   line-height: 2;
 }
-.single article,
-.singleBlog article,
-.blog article {
+.single article, .singleBlog article, .blog article {
   flex: 0 0 58%;
   border-bottom: 4px double lightgray;
   padding-bottom: 50px;
   margin-bottom: 100px;
 }
-.single article h3,
-.singleBlog article h3,
-.blog article h3 {
+.single article h3, .singleBlog article h3, .blog article h3 {
   font-size: 2rem;
 }
-.single article img,
-.singleBlog article img,
-.blog article img {
+.single article img, .singleBlog article img, .blog article img {
   width: 100%;
 }
-.single article li::before,
-.singleBlog article li::before,
-.blog article li::before {
+.single article li::before, .singleBlog article li::before, .blog article li::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
   margin-right: 10px;
 }
-.single aside,
-.singleBlog aside,
-.blog aside {
+.single aside, .singleBlog aside, .blog aside {
   flex: 0 0 38%;
 }
-.single aside .widget,
-.singleBlog aside .widget,
-.blog aside .widget {
+.single aside .widget, .singleBlog aside .widget, .blog aside .widget {
   background: #f7f8f9;
   padding: 30px;
   margin-bottom: 50px;
 }
-.single aside .widget h3,
-.singleBlog aside .widget h3,
-.blog aside .widget h3 {
+.single aside .widget h3, .singleBlog aside .widget h3, .blog aside .widget h3 {
   border-bottom: 1px solid #59b52a;
   padding-bottom: 10px;
 }
-.single aside .widget li a,
-.singleBlog aside .widget li a,
-.blog aside .widget li a {
+.single aside .widget li a, .singleBlog aside .widget li a, .blog aside .widget li a {
   color: #555555;
 }
-.single aside .widget li a:hover,
-.singleBlog aside .widget li a:hover,
-.blog aside .widget li a:hover {
+.single aside .widget li a:hover, .singleBlog aside .widget li a:hover, .blog aside .widget li a:hover {
   color: black;
   margin-left: 20px;
 }
-.single aside .widget li:first-child,
-.singleBlog aside .widget li:first-child,
-.blog aside .widget li:first-child {
+.single aside .widget li:first-child, .singleBlog aside .widget li:first-child, .blog aside .widget li:first-child {
   padding-top: 10px;
 }
 

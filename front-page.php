@@ -7,13 +7,13 @@
 
     <!-- istrazite -->
     <section class="istrazite py container">
-        <h2>Istražite</h2>
+        <h2><?php the_field('istrazite'); ?></h2>
       <?php get_template_part('istrazite'); ?>
     </section>
 
     <!-- dogadjaji -->
     <section class="dogadjaji py bg-gray">
-        <h2>Događanja u Fažani</h2>
+        <h2><?php the_field('dogadjanja'); ?></h2>
         <?php get_template_part('dogadjanja'); ?>
     </section>
 <?php get_footer(); ?>

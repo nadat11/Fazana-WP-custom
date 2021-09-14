@@ -1,32 +1,19 @@
 <article class="container">
-    <div>
-        <a href="dogadjaj1.php">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/riva.webp" alt="">
-        </a>
-        <div class="text">
-            <p>03.08.2021</p>
-            <h3>Priče s fažanske rive</h3>
-            <a class="btn" href="dogadjaj1.php">Više &gt;</a>
-        </div>
-    </div>
-    <div>
-        <a href="dogadjaj2.php">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/tradicija.webp" alt="">
-        </a>
-        <div class="text">
-            <p>14.08.2021</p>
-            <h3>Tradicijske večeri</h3>
-            <a class="btn" href="dogadjaj2.php">Više &gt;</a>
-        </div>
-    </div>
-    <div>
-        <a href="dogadjaj3.php">
-            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/valbandon.webp" alt="">
-        </a>
-        <div class="text">
-            <p>28.08.2021</p>
-            <h3>Valbandon pod zvezdama</h3>
-            <a class="btn" href="dogadjaj3.php">Više &gt;</a>
-        </div>
-    </div>
+    <?php $query = new WP_Query(array('post_type' => 'dogadjanja'));
+    if($query->have_posts()) : ?>
+    <?php while($query->have_posts()) : $query->the_post(); ?>
+            <div>
+                <a href="dogadjanja.php">
+                    <?php the_post_thumbnail();  ?>
+                </a>
+                <div class="text">
+                    <?php echo get_the_date('F j, Y, g:i a'); ?>
+                   <h3> <?php the_title(); ?></h3>
+                    <a class="btn" href="<?php the_permalink(); ?>"><?php _e('Više &gt;'); ?></a>
+                </div>
+            </div>
+    <?php endwhile; wp_reset_postdata(); ?>
+    <?php else : ?>
+        <?php _e('Nema unetih dogadjanja'); ?>
+    <?php endif; ?>
 </article>
