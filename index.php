@@ -29,7 +29,7 @@ get_header(); ?>
                         <div class="meta"><?php echo get_the_date('F j, Y, g:i a'); ?>  | <a href=""><?php the_author(); ?></a></div>
                         <?php the_excerpt(); ?>
                         <a class="btn" href="<?php the_permalink(); ?>">
-                            <?php _e('Više &gt;'); ?>
+                            <?php _e('Ceo tekst'); ?>
                         </a>
                     </div>
                 </div>
@@ -38,6 +38,7 @@ get_header(); ?>
             <?php endif; ?>
             
         </article>
+
         <aside>
             <?php get_sidebar(); ?>
         </aside>
